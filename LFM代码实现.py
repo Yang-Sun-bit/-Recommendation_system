@@ -107,7 +107,7 @@ class LFM(object):
 
 if __name__ == '__main__':
     dtype = [("userId", np.int32), ("movieId", np.int32), ("rating", np.float32)]
-    dataset = pd.read_csv("ml-latest-small/ratings.csv", usecols=range(3), dtype=dict(dtype))
+    dataset = pd.read_csv("ratings.csv", usecols=range(3), dtype=dict(dtype))
 
     lfm = LFM(0.02, 0.01, 0.01, 10, 100, ["userId", "movieId", "rating"])
     lfm.fit(dataset)
