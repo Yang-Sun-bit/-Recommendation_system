@@ -163,7 +163,7 @@ class BaselineCFBySGD(object):
 
 if __name__ == '__main__':
 
-    trainset, testset = data_split("ml-latest-small/ratings.csv", random=True)
+    trainset, testset = data_split("ratings.csv", random=True)
 
     bcf = BaselineCFBySGD(20, 0.1, 0.1, ["userId", "movieId", "rating"])
     bcf.fit(trainset)
