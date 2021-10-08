@@ -168,7 +168,7 @@ class BaselineCFByALS(object):
 
 
 if __name__ == '__main__':
-    trainset, testset = data_split("ml-latest-small/ratings.csv", random=True)
+    trainset, testset = data_split("ratings.csv", random=True)
 
     bcf = BaselineCFByALS(20, 25, 15, ["userId", "movieId", "rating"])
     bcf.fit(trainset)
