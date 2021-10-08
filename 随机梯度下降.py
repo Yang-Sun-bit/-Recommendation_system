@@ -61,7 +61,7 @@ class BaselineCFBySGD(object):
 
 if __name__ == '__main__':
     dtype = [("userId", np.int32), ("movieId", np.int32), ("rating", np.float32)]
-    dataset = pd.read_csv("ml-latest-small/ratings.csv", usecols=range(3), dtype=dict(dtype))
+    dataset = pd.read_csv("ratings.csv", usecols=range(3), dtype=dict(dtype))
 
     bcf = BaselineCFBySGD(20, 0.1, 0.1, ["userId", "movieId", "rating"])
     bcf.fit(dataset)
